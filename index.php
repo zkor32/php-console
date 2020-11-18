@@ -20,6 +20,27 @@
     </div>
     <div class="container">
         <div class="row">
+        <div class="col-12">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h3>Clase: Condicional IF</h3>
+                    <?php 
+                    $name = "Max";
+                    $year = 1998;
+
+                    if($name == "Max" &&  $year >2000){
+                        echo "eres Max de este milenio";
+                    }else if($name == "Max" ){
+                        echo "eres max del mileno pasado";
+
+                    }
+                    else {
+                        echo "no eres Max";
+                    }
+                   
+                       
+                    ?>
+                </div> 
+            </div>
             <div class="col-12">
                 <div class="p-3 m-2 bg-info text-white">
                     <h3>Clase: Operadores</h3>
