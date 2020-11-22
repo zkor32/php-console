@@ -20,6 +20,96 @@
     </div>
     <div class="container">
         <div class="row">
+        <div class="col-6">
+                <div class="p-3 m-2 bg-success text-white">
+                    <h3>Clase: Bucle while</h3>
+                    <?php 
+                    $num = -1;
+                    while($num < 5){
+                    $num++;
+                        echo "El numero es: " . $num . "<br>";
+                    
+                    }
+                    ?>
+                </div> 
+            </div>
+        <div class="col-6">
+                <div class="p-3 m-2 bg-warning text-white">
+                    <h3>Clase: Bucle For</h3>
+                    <?php 
+                    for($i = 0; $i < 5; $i++){
+                        echo "el valor de i es: " . $i . "<br>";
+                    }
+                 
+                       
+                    ?>
+                </div> 
+            </div>
+        <div class="col-12">
+                <div class="p-3 m-2 bg-info text-white">
+                    <h3>Clase: Condicional Switch</h3>
+                    <?php 
+                    $num = 4;
+                    switch($num){
+                        case 1:
+                            echo "La calificación es muy baja";
+                        break;
+
+                        case 2:
+                            echo "La calificación sigue siendo muy baja";
+                        break;  
+
+                        case 4:
+                            echo "La calificación es mediocre";
+                        break; 
+
+                        case 6:
+                            echo "La calificación es decente";
+                        break;  
+
+                        case 8:
+                            echo "La calificación es buena";
+
+                        break;
+
+                        case 10:
+                            echo "La calificación es excelente";     
+                        break;          
+
+
+                    }
+             /*       
+
+                    if($num == 1){
+                        echo "La calificación es muy baja";
+
+                    }
+                    else if($num == 2){
+                        echo "La calificación sigue siendo muy baja";
+
+
+                    }   else if($num == 4){
+                        echo "La calificación es mediocre";
+
+
+                    }   else if($num == 6){
+                        echo "La calificación es decente";
+
+
+                    }   else if($num == 10){
+                        echo "La calificación es excelente";
+
+
+                    }
+                    else{
+                        echo "La calificación no es válida";
+
+
+                    }*/
+                       
+                    ?>
+                </div> 
+            </div>
         <div class="col-12">
                 <div class="p-3 m-2 bg-primary text-white">
                     <h3>Clase: Condicional IF</h3>
