@@ -20,6 +20,49 @@
     </div>
     <div class="container">
         <div class="row">
+        <div class="col-4">
+                <div class="p-3 m-2 bg-success text-white">
+                    <h3>Clase: Foreach</h3>
+                    <?php 
+                    $names= array("max","doomboy","jeipi","castoro");
+
+                foreach($names as $name){
+                    echo $name . "<br>";
+                }
+                                 
+                    ?>
+                </div> 
+            </div>
+        <div class="col-4">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h3>Clase: Arrays</h3>
+                    <?php 
+                    $nums= array(1,7,15,32);
+                
+                    echo $nums[3] . "<br>";
+                    for($i=0;$i < count($nums); $i++){
+
+                        echo $nums[$i] . "<br>";
+                    }
+            
+                    ?>
+                </div> 
+            </div>
+        <div class="col-4">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h3>Clase: Arrays</h3>
+                    <?php 
+                    $nums= array("max","doomboy","jeipi","castoro");
+                
+                    echo $nums[3] . "<br><br>";
+                    for($i=0;$i < count($nums); $i++){
+
+                        echo $nums[$i] . "<br>";
+                    }
+                                 
+                    ?>
+                </div> 
+            </div>
         <div class="col-6">
                 <div class="p-3 m-2 bg-success text-white">
                     <h3>Clase: Bucle while</h3>
