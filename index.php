@@ -20,6 +20,61 @@
     </div>
     <div class="container">
         <div class="row">
+        <div class="col-12">
+                <div class="p-3 m-2 bg-warning text-white">
+                    <h3>Clase: Funciones</h3>
+                    <?php 
+                    function calc ($sign, $num1, $num2){
+                        switch($sign){
+                            case "+":
+                                return $num1 + $num2;
+                            break;
+                            case "-":
+                                return $num1 - $num2;
+                            break;
+                            default:
+                                return 0;
+                        }
+                    }
+                    $result = calc("/", 7, 3);
+
+                    echo "El resultado es: " . $result;
+
+             
+            
+                    ?>
+                </div> 
+            </div>
+        <div class="col-6">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h3>Clase: Continue</h3>
+                    <?php 
+                    $nums= array(1,7,15,32);
+                
+                    echo $nums[3] . "<br>";
+                    for($i=0;$i < count($nums); $i++){
+
+                        echo $nums[$i] . "<br>";
+                    }
+            
+                    ?>
+                </div> 
+            </div>
+        <div class="col-6">
+                <div class="p-3 m-2 bg-primary text-white">
+                    <h3>Clase: Break</h3>
+                    <?php 
+                    $nums= array(1,7,15,32);
+                
+                    echo $nums[3] . "<br>";
+                    for($i=0;$i < count($nums); $i++){
+
+                        echo $nums[$i] . "<br>";
+                    }
+            
+                    ?>
+                </div> 
+            </div>
         <div class="col-4">
                 <div class="p-3 m-2 bg-success text-white">
                     <h3>Clase: Foreach</h3>
