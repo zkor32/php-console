@@ -21,6 +21,53 @@
     <div class="container">
         <div class="row">
         <div class="col-12">
+                <div class="p-3 m-2 bg-success text-white">
+                    <h3>Clase: POO</h3>
+                    <?php 
+
+                    class Mascota {
+                        public $nombre;
+                        public $tipo;
+                        public $patas;
+
+                       function __construct($nombre, $tipo, $patas){
+                            $this->nombre = $nombre;
+                            $this->tipo = $tipo;
+                            $this->patas = $patas;
+                       }    
+                       public function getDesc(){
+                           if($this->patas == 0){
+                               return "La especie de tu mascota es " . $this->tipo . ", se llama " . $this->nombre . " y no tiene patas " ;
+                           }else {
+
+                            return "La especie de tu mascota es " . $this->tipo . ", se llama " . $this->nombre . " y tiene " . $this->patas . " patas.";
+                        }
+
+                       }
+                    }
+                    class Casa {
+                        public $habitaciones = 3;
+                    }
+                    $pareada = new Casa();
+                    echo $pareada->habitaciones . "<br>";
+
+                    $perro = new Mascota("Flaco","perro", 4);
+                    $gato = new Mascota("Vasili","gato", 4);
+                    $culebra = new Mascota("Snake","culebra", 0);
+
+                    echo $perro->getDesc() . "<br>";
+                    echo $gato->getDesc() . "<br>";
+                    echo $culebra->getDesc();
+
+
+
+                
+
+               
+                    ?>
+                </div> 
+            </div>
+        <div class="col-12">
                 <div class="p-3 m-2 bg-warning text-white">
                     <h3>Clase: Funciones</h3>
                     <?php 
