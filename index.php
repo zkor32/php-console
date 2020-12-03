@@ -21,6 +21,62 @@
     <div class="container">
         <div class="row">
         <div class="col-12">
+                <div class="p-3 m-2 bg-dark text-white">
+                    <h3>Calculadora</h3>
+                    <?php 
+                    class Calculadora {
+                        public static function sumar($num1,$num2){
+                            return $num1 + $num2;
+                        }
+                        public static function restar($num1,$num2){
+                            return $num1 - $num2;
+                        }
+
+                    }
+                    echo "El resultado es: " . Calculadora::sumar(5,2) . "<br>";
+                    echo "El resultado es: " . Calculadora::restar(5,2) . "<br>";
+
+                    /*$calc = new Calculadora();
+                    echo "El resultado es: " . $calc->sumar(5,2);
+                    */
+
+                    ?>
+                </div> 
+            </div>
+        <div class="col-12">
+                <div class="p-3 m-2 bg-success text-white">
+                    <h3>Clase: Herencia</h3>
+                    <?php 
+
+                    class Pet {
+                        public $nombre;
+                        public $patas;
+
+                       function __construct($nombre, $patas){
+                            $this->nombre = $nombre;
+                            $this->patas = $patas;
+                       }
+                       function eat(){
+                           return "Esta comiendo";
+
+                       }                
+                    }
+                    
+                    class Perro extends Pet{
+
+
+                    }
+                    $dulcinea = new Perro("Dulcinea",4);
+                    echo $dulcinea->nombre . " " . $dulcinea->eat();
+
+
+                
+
+               
+                    ?>
+                </div> 
+            </div>
+        <div class="col-12">
                 <div class="p-3 m-2 bg-success text-white">
                     <h3>Clase: POO</h3>
                     <?php 
