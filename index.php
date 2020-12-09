@@ -19,7 +19,107 @@
         </div>
     </div>
     <div class="container">
+    <?php
+     include('KidsGames/games.php');
+     include('VideoGames/games.php');
+    include('person.php');
+    ?>
+       <div class="row">
+             <div class="col-12">
+                <div class="p-3 m-2 bg-dark text-white">
+                    <h3>Namespace</h3> <br>
+                    <?php
+                        $videojuego = new \videogames\Games(2,"Aklaim", "Mortal Kombat II", "Lucha" );
+                        $juego = new \kidsgames\Games(6 ,"Tombo" ,7 , "espacio abierto" );
+                        echo $videojuego->getGame() . "<br><br>";
+                        echo $juego->getGame();
+
+
+                    ?>
+
+                       
+                </div> 
+            </div>
+    </div> 
+    <div class="row">
+             <div class="col-12">
+                <div class="p-3 m-2 bg-dark text-white">
+                    <h3>Include</h3> <br>
+                    <?php
+
+                    $persona = new Person("Rafaella","Bello");
+
+                    echo $persona->greetings();
+
+                    ?>
+
+                       
+                </div> 
+            </div>
+    </div>        
+         
         <div class="row">
+             <div class="col-6">
+                <div class="p-3 m-2 bg-info text-white">
+                    <h3>Formulario GET</h3>
+                        <form class="form-inline" method="get" action="#">
+                            <div class="form-group mx-sm-1 mb-2">
+                                <label for="saludo" class="sr-only">Saludo</label>
+                                <input type="text" class="form-control" id="saludo" name="saludo">
+                            </div>
+                        <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                        </form>
+                </div> 
+            </div>
+            <div class="col-6">
+                <div class="p-3 m-2 bg-success text-white">
+                    <h3>Formulario GET</h3>
+                    <?php 
+               
+                    if(isset($_GET['saludo'])){
+                    
+                        echo $_GET['saludo'];
+                    }else{                         
+                        echo "Esperando saludo...";                
+
+                    }
+           
+                    ?>
+                </div> 
+            </div>
+            <div class="col-6">
+                <div class="p-3 m-2 bg-info text-white">
+                    <h3>Formulario Calculo</h3>
+                    <form class="form-inline" method="post" action="#">
+                     
+                        <div class="form-group mx-sm-1 mb-2">
+                            <label for="saludo" class="sr-only">Saludo</label>
+                            <input type="number" class="form-control" id="n1" name="n1">
+                        </div>
+                        <div class="form-group mx-sm-1 mb-2">
+                            <label for="saludo" class="sr-only">Saludo</label>
+                            <input type="number" class="form-control" id="n2" name="n2">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Sumar</button>
+                        </form>
+                </div> 
+            </div>
+            <div class="col-6">
+                <div class="p-3 m-2 bg-success text-white">
+                    <h3>Formulario Resultado</h3>
+                    <?php 
+               
+                    if(isset($_POST['n1']) && isset($_POST['n2']) ){
+                        $result = $_POST['n1'] + $_POST['n2'];
+                        echo "El resultado es de la suma de " . $_POST['n1'] . " y " . $_POST['n2'] . " es "  . $result;
+                    }else{                         
+                        echo "No estan ingresados dos numeros";                
+
+                    }
+           
+                    ?>
+                </div> 
+            </div>
         <div class="col-12">
                 <div class="p-3 m-2 bg-dark text-white">
                     <h3>Calculadora</h3>
